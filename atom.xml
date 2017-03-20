@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>0x0&#39;s Blog</title>
+  <subtitle>Font-end &amp; Technology</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://wzc0x0.github.io/"/>
+  <updated>2017-03-20T12:22:09.799Z</updated>
+  <id>https://wzc0x0.github.io/</id>
+  
+  <author>
+    <name>wzc0x0</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>css垂直居中</title>
+    <link href="https://wzc0x0.github.io/programming/css-center-vertical.html"/>
+    <id>https://wzc0x0.github.io/programming/css-center-vertical.html</id>
+    <published>2016-05-03T16:00:00.000Z</published>
+    <updated>2017-03-20T12:22:09.799Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们都清楚元素相对其父级元素水平居中展示的方法：<br>对于<code>inline</code> 的元素，父级元素设置<code>text-align : center</code>。对于<code>block</code>元素，我们会设定其<code>margin: 0 auto</code>。然而，垂直居中的实现方法，并没有这么简单，下面6种方法。<br><a id="more"></a><br><a href="http://yoursite.com/2016/05/04/css-中的垂直居中法/index.html" target="_blank" rel="external">参考文章</a></p>
+<h2 id="Vertical-Align"><a href="#Vertical-Align" class="headerlink" title="Vertical-Align"></a><code>Vertical-Align</code></h2><hr>
+<p><code>vertical-align: middle</code>该属性定义行内元素的<strong>基线相对于该元素所在行的基线的垂直对齐。在表单元格中，这个属性会设置单元格框中的单元格内容的对齐方式.</strong><br>But !!!<em>Vertical-align doesn’t apply to block-level elements like a paragraph inside a <code>div.</code></em></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span>middle me!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span>&#123;<span class="attribute">display</span>: table;&#125;</div><div class="line"><span class="selector-class">.content</span>&#123;<span class="attribute">display</span>: table-cell;<span class="attribute">vertical-align</span>:center&#125;</div></pre></td></tr></table></figure>
+<h2 id="Line-height"><a href="#Line-height" class="headerlink" title="Line-height"></a><code>Line-height</code></h2><hr>
+<p>该方法适用于单行文本(或图片)的垂直居中，将<code>line-height</code>属性设置的大于<code>font-size</code>，且等于容器的高度。</p>
+<h2 id="绝对定位-margin"><a href="#绝对定位-margin" class="headerlink" title="绝对定位 margin"></a><code>绝对定位 margin</code></h2><hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span>middle me!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span>&#123;<span class="attribute">position</span>: relative;<span class="attribute">height</span>:<span class="number">800px</span>&#125;</div><div class="line"><span class="selector-class">.content</span>&#123;</div><div class="line">	<span class="attribute">position</span>:absolute;</div><div class="line">	<span class="attribute">top</span>:<span class="number">50%</span>;</div><div class="line">	<span class="attribute">left</span>:<span class="number">50%</span>;</div><div class="line">	<span class="attribute">height</span>:<span class="number">30%</span>;</div><div class="line">	<span class="attribute">width</span>:<span class="number">50%</span>;</div><div class="line">	<span class="attribute">margin</span>:-<span class="number">15%</span> <span class="number">0</span> <span class="number">0</span> -<span class="number">25%</span> <span class="comment">/*margin 为负值且为自身尺寸的一半*/</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="绝对定位-Stretching"><a href="#绝对定位-Stretching" class="headerlink" title="绝对定位 Stretching"></a><code>绝对定位 Stretching</code></h2><hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span>middle me!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span>&#123;<span class="attribute">position</span>: relative;<span class="attribute">height</span>:<span class="number">300px</span>&#125;</div><div class="line"><span class="selector-class">.content</span>&#123;</div><div class="line">	<span class="attribute">position</span>:absolute;</div><div class="line">	<span class="attribute">top</span>:<span class="number">0</span>;</div><div class="line">	<span class="attribute">bottom</span>:<span class="number">0</span>;</div><div class="line">	<span class="attribute">left</span>:<span class="number">0</span>;</div><div class="line">	<span class="attribute">right</span>:<span class="number">0</span>;</div><div class="line">	<span class="attribute">height</span>:<span class="number">30%</span>;</div><div class="line">	<span class="attribute">width</span>:<span class="number">50%</span>;</div><div class="line">	<span class="attribute">margin</span>:auto</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种方法，在IE 8 以下不 work …</p>
+<h2 id="绝对定位-and-transform"><a href="#绝对定位-and-transform" class="headerlink" title="绝对定位 and transform"></a><code>绝对定位 and transform</code></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span>middle me!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span>&#123;<span class="attribute">position</span>: relative;<span class="attribute">height</span>:<span class="number">300px</span>&#125;</div><div class="line"><span class="selector-class">.content</span>&#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>:<span class="number">50%</span>;</div><div class="line">	<span class="attribute">left</span>:<span class="number">50%</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">150px</span>;</div><div class="line">	<span class="attribute">height</span>: <span class="number">130px</span>;</div><div class="line">	<span class="attribute">transform</span>:<span class="built_in">translate</span>(-50%,-50%); <span class="comment">/*向左向上移动自身尺寸的一半*/</span></div></pre></td></tr></table></figure>
+<h2 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a><code>Flex布局</code></h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span>middle me!<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">	<span class="attribute">display</span>:flex;</div><div class="line">	<span class="attribute">height</span>:<span class="number">300px</span>;</div><div class="line">	<span class="attribute">justify-content</span>: center;</div><div class="line">	<span class="attribute">align-items</span>: center;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.content</span>&#123;</div><div class="line">	<span class="comment">/*margin:auto;直接flex就可以*/</span></div><div class="line">	<span class="attribute">height</span>:<span class="number">200px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们都清楚元素相对其父级元素水平居中展示的方法：&lt;br&gt;对于&lt;code&gt;inline&lt;/code&gt; 的元素，父级元素设置&lt;code&gt;text-align : center&lt;/code&gt;。对于&lt;code&gt;block&lt;/code&gt;元素，我们会设定其&lt;code&gt;margin: 0 auto&lt;/code&gt;。然而，垂直居中的实现方法，并没有这么简单，下面6种方法。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端开发" scheme="https://wzc0x0.github.io/categories/programming/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JS中的call、apply、bind的那些事?</title>
+    <link href="https://wzc0x0.github.io/programming/call.html"/>
+    <id>https://wzc0x0.github.io/programming/call.html</id>
+    <published>2016-03-17T15:56:48.000Z</published>
+    <updated>2017-03-20T08:58:08.705Z</updated>
+    
+    <content type="html"><![CDATA[<p>这三种函数都是是用来<strong>改变函数执行时的上下文，改变函数this指向。</strong>同时也可以用来继承对象的方法。<br><a id="more"></a></p>
+<p><strong> 示例：</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Animal</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">  <span class="keyword">this</span>.name = name;</div><div class="line">&#125;</div><div class="line">Animal.prototype.sayHi = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> dog = <span class="keyword">new</span> Animal(<span class="string">'Wang!'</span>);</div><div class="line">dog.sayHi();</div><div class="line"></div><div class="line"><span class="comment">// 创建对象,但没有animal方法</span></div><div class="line"><span class="keyword">var</span> cat = &#123;</div><div class="line">  <span class="attr">name</span>:<span class="string">'Miao!'</span></div><div class="line">&#125;</div><div class="line">dog.sayHi.call(cat);</div><div class="line">dog.sayHi.apply(cat);</div><div class="line">dog.sayHi.bind(cat)();</div><div class="line"><span class="comment">//控制台输出三次</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>call,apply改变了函数执行时的上下文this，bind则返回了改变后的函数。</p>
+</blockquote>
+<h2 id="call-amp-apply的区别"><a href="#call-amp-apply的区别" class="headerlink" title="call &amp; apply的区别"></a>call &amp; apply的区别</h2><blockquote>
+<p>第一个参数是要改变上下文的对象，区别在第二个参数。</p>
+<ul>
+<li>apply是以参数数组形式</li>
+<li>call则是单个参数一一对应</li>
+</ul>
+</blockquote>
+<p><strong>例如:</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 求该数组最大最小值</span></div><div class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</div><div class="line"><span class="built_in">Math</span>.max.apply(<span class="literal">null</span>,a) <span class="comment">//参数数组形式</span></div><div class="line"><span class="built_in">Math</span>.max.call(<span class="literal">null</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>) <span class="comment">// 参数罗列</span></div></pre></td></tr></table></figure></p>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">isArray</span>(<span class="params">obj</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.apply(obj) == <span class="string">'[object Array]'</span>;</div><div class="line">&#125;<span class="comment">//数组类型判断</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">reserveArr</span>(<span class="params">obj</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.prototype.slice.apply(obj)</div><div class="line">&#125;<span class="comment">//伪数组转换</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这三种函数都是是用来&lt;strong&gt;改变函数执行时的上下文，改变函数this指向。&lt;/strong&gt;同时也可以用来继承对象的方法。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端开发" scheme="https://wzc0x0.github.io/categories/programming/"/>
+    
+    
+      <category term="Javascript" scheme="https://wzc0x0.github.io/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字符串与数组常用方法解析</title>
+    <link href="https://wzc0x0.github.io/programming/string-array-function.html"/>
+    <id>https://wzc0x0.github.io/programming/string-array-function.html</id>
+    <published>2016-03-17T15:56:04.000Z</published>
+    <updated>2017-03-20T12:22:46.882Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="字符串篇"><a href="#字符串篇" class="headerlink" title="字符串篇"></a>字符串篇</h2><p>字符串作为前端攻城狮经常处理的数据类型，搞清各种方式很重要！<br><a id="more"></a></p>
+<ul>
+<li><p>substr()</p>
+<blockquote>
+<p>String.substr(start,length)<br>从start处抽取length个字符，如果负数，从尾部开始。length可选，如果没有，抽取整个字符串。</p>
+</blockquote>
+</li>
+<li><p>substring()</p>
+<blockquote>
+<p>String.substring(start,end)<br>从start处开始到end处(不包括end)抽取字符。<br>slice可以完全取代他———来自《Javascript语言精粹》</p>
+</blockquote>
+</li>
+<li><p>slice()</p>
+<blockquote>
+<p>String.slice(start,end)<br>若start参数是负数，它将与string.length相加。end参数可选，默认是string.length。如果end也是负数，同样与string.length相加。</p>
+</blockquote>
+</li>
+<li><p>split()</p>
+<blockquote>
+<p>String.split(<em>separator</em>,<em>limit</em>)<br>该方法把当前string分割成片段来创建一个字符串数组。可选参数<em>limit</em>可以限制分割片段的数量。<em>separator</em>参数可以是字符串或者正则表达。</p>
+</blockquote>
+</li>
+<li><p>replace()</p>
+<blockquote>
+<p>String.replace(<em>reg/str</em>,<em>value</em>)<br>字符串的查找替换操作，返回一个新的字符串。若第一个参数是字符串只会在第一次匹配的地方替换。当换成正则表达并且带g标识，则可以全部替换。<br><em>value</em>中有<code>$</code>字符会有特殊意义，<em>value</em>还可以是函数</p>
+</blockquote>
+</li>
+<li><p>indexOf()</p>
+<blockquote>
+<p>String.indexOf(str,position)<br>该方法从string中查找str，如果找到返回第一次匹配字符的位置，没有则返回-1。可选参数position从指定位置开始查找。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="数组篇"><a href="#数组篇" class="headerlink" title="数组篇"></a>数组篇</h2><ul>
+<li><p>concat(item..)</p>
+<blockquote>
+<p>可以把多个参数附加其后产生新的数组。用于数组的连接</p>
+</blockquote>
+</li>
+<li><p>join(params)</p>
+<blockquote>
+<p>可以把一个数组构造成字符串。默认参数是逗号分割<code>,</code></p>
+</blockquote>
+</li>
+<li><p>slice(start,end)</p>
+<blockquote>
+<p>在数组中与字符串中方法一致</p>
+</blockquote>
+</li>
+<li><p>splice(start,deleteCount,item)</p>
+<blockquote>
+<p>splice方法从数组中移除一个或多个元素，并用新的item替换它们。从start开始，移除deleteCount个数。item可选，是要替换的元素。主要作用是从数组中指定位置删除数组中的元素。</p>
+</blockquote>
+</li>
+<li><p>shift()| unshift() | push() | pop()</p>
+<blockquote>
+<p>简单的数组方法略。</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;字符串篇&quot;&gt;&lt;a href=&quot;#字符串篇&quot; class=&quot;headerlink&quot; title=&quot;字符串篇&quot;&gt;&lt;/a&gt;字符串篇&lt;/h2&gt;&lt;p&gt;字符串作为前端攻城狮经常处理的数据类型，搞清各种方式很重要！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端开发" scheme="https://wzc0x0.github.io/categories/programming/"/>
+    
+    
+      <category term="Javascript" scheme="https://wzc0x0.github.io/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>欢迎来到我的博客！</title>
+    <link href="https://wzc0x0.github.io/Hello-world/my-first-blog.html"/>
+    <id>https://wzc0x0.github.io/Hello-world/my-first-blog.html</id>
+    <published>2016-03-04T14:41:23.000Z</published>
+    <updated>2017-03-20T08:57:34.395Z</updated>
+    
+    <content type="html"><![CDATA[<p>本博客记录自己开发(有趣地玩)过程中的所思，所想，所得。同时也是与大家沟通交流的小平台！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本博客记录自己开发(有趣地玩)过程中的所思，所想，所得。同时也是与大家沟通交流的小平台！&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="Hello world!" scheme="https://wzc0x0.github.io/categories/Hello-world/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello world!</title>
+    <link href="https://wzc0x0.github.io/Hello-world/hello-world.html"/>
+    <id>https://wzc0x0.github.io/Hello-world/hello-world.html</id>
+    <published>2016-03-03T16:00:00.000Z</published>
+    <updated>2017-03-20T13:10:09.936Z</updated>
+    
+    <content type="html"><![CDATA[<p>学习每一门语言第一句话都是把神奇的<code>Hello world!</code>打印出来，而本博客是怎么说出第一句<em>Hello world!</em>呢?我在这里记录了诞生的经过。<a id="more"></a></p>
+<h3 id="首先感谢Github"><a href="#首先感谢Github" class="headerlink" title="首先感谢Github"></a>首先感谢Github</h3><p>　　想起Git,我第一印象不是复杂的命令更新，提交，分支，合并等等，而是一次满满感恩的回忆！<br>还记得当年“墙”还不是那么高，随意一个梯子(VPN之类的)还能时不时去看看资本世界的水深火热，然而道高一尺魔高一丈，随着墙的高筑，一般的梯子也爬不出去了。<br>　　Git这个全球最大的同性交友网站(笑)，为每一个IT从业者分享了来自全世界“搬砖者们”死亡多少脑细胞后的结晶。Git推出的学生计划，让全世界的大学生(天朝需要学生证)，免费使用云计算<a href="https://digitalOcean.com" target="_blank" rel="external">DigitalOcean</a>(vps)一年。大公司有大胸怀，Git履行了扶持社会的职责。如今阿里，腾讯都有相关的活动，也只是呵呵了。<br>    最后再次感谢Git让我第一次接触的云计算和酷酷的linux。</p>
+<hr>
+<h3 id="本博客所用到的技术"><a href="#本博客所用到的技术" class="headerlink" title="本博客所用到的技术"></a>本博客所用到的技术</h3><blockquote>
+<ul>
+<li>服务端 <a href="https://pages.github.com/" target="_blank" rel="external">github.io</a></li>
+<li>博客框架<a href="https://hexo.io" target="_blank" rel="external">hexo</a>(需要NodeJs环境)</li>
+<li>博客主题<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">next</a></li>
+<li>博客语言：markdown</li>
+</ul>
+</blockquote>
+<p><strong>直接查看官方文档!</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学习每一门语言第一句话都是把神奇的&lt;code&gt;Hello world!&lt;/code&gt;打印出来，而本博客是怎么说出第一句&lt;em&gt;Hello world!&lt;/em&gt;呢?我在这里记录了诞生的经过。
+    
+    </summary>
+    
+      <category term="Hello world!" scheme="https://wzc0x0.github.io/categories/Hello-world/"/>
+    
+    
+  </entry>
+  
+</feed>
