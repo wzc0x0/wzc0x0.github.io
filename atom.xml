@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wzc0x0.github.io/"/>
-  <updated>2017-03-20T12:22:09.799Z</updated>
+  <updated>2017-03-20T13:50:30.990Z</updated>
   <id>https://wzc0x0.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://wzc0x0.github.io/programming/css-center-vertical.html"/>
     <id>https://wzc0x0.github.io/programming/css-center-vertical.html</id>
     <published>2016-05-03T16:00:00.000Z</published>
-    <updated>2017-03-20T12:22:09.799Z</updated>
+    <updated>2017-03-20T13:50:30.990Z</updated>
     
     <content type="html"><![CDATA[<p>我们都清楚元素相对其父级元素水平居中展示的方法：<br>对于<code>inline</code> 的元素，父级元素设置<code>text-align : center</code>。对于<code>block</code>元素，我们会设定其<code>margin: 0 auto</code>。然而，垂直居中的实现方法，并没有这么简单，下面6种方法。<br><a id="more"></a><br><a href="http://yoursite.com/2016/05/04/css-中的垂直居中法/index.html" target="_blank" rel="external">参考文章</a></p>
 <h2 id="Vertical-Align"><a href="#Vertical-Align" class="headerlink" title="Vertical-Align"></a><code>Vertical-Align</code></h2><hr>
@@ -50,6 +50,8 @@
     
       <category term="前端开发" scheme="https://wzc0x0.github.io/categories/programming/"/>
     
+    
+      <category term="css" scheme="https://wzc0x0.github.io/tags/css/"/>
     
   </entry>
   
@@ -94,10 +96,10 @@
     <link href="https://wzc0x0.github.io/programming/string-array-function.html"/>
     <id>https://wzc0x0.github.io/programming/string-array-function.html</id>
     <published>2016-03-17T15:56:04.000Z</published>
-    <updated>2017-03-20T12:22:46.882Z</updated>
+    <updated>2017-03-21T03:39:17.468Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="字符串篇"><a href="#字符串篇" class="headerlink" title="字符串篇"></a>字符串篇</h2><p>字符串作为前端攻城狮经常处理的数据类型，搞清各种方式很重要！<br><a id="more"></a></p>
-<ul>
+    <content type="html"><![CDATA[<p>字符串与数组操作作为前端攻城狮经常处理的数据类型，搞清各种方式很重要！<br><a id="more"></a></p>
+<h2 id="字符串篇"><a href="#字符串篇" class="headerlink" title="字符串篇"></a>字符串篇</h2><ul>
 <li><p>substr()</p>
 <blockquote>
 <p>String.substr(start,length)<br>从start处抽取length个字符，如果负数，从尾部开始。length可选，如果没有，抽取整个字符串。</p>
@@ -105,7 +107,7 @@
 </li>
 <li><p>substring()</p>
 <blockquote>
-<p>String.substring(start,end)<br>从start处开始到end处(不包括end)抽取字符。<br>slice可以完全取代他———来自《Javascript语言精粹》</p>
+<p>String.substring(start,end)<br>从start处开始到end处(不包括end)抽取字符。<br>slice可以完全取代它———来自《Javascript语言精粹》</p>
 </blockquote>
 </li>
 <li><p>slice()</p>
@@ -160,7 +162,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;字符串篇&quot;&gt;&lt;a href=&quot;#字符串篇&quot; class=&quot;headerlink&quot; title=&quot;字符串篇&quot;&gt;&lt;/a&gt;字符串篇&lt;/h2&gt;&lt;p&gt;字符串作为前端攻城狮经常处理的数据类型，搞清各种方式很重要！&lt;br&gt;
+      &lt;p&gt;字符串与数组操作作为前端攻城狮经常处理的数据类型，搞清各种方式很重要！&lt;br&gt;
     
     </summary>
     
@@ -198,7 +200,7 @@
     <link href="https://wzc0x0.github.io/Hello-world/hello-world.html"/>
     <id>https://wzc0x0.github.io/Hello-world/hello-world.html</id>
     <published>2016-03-03T16:00:00.000Z</published>
-    <updated>2017-03-20T13:10:09.936Z</updated>
+    <updated>2017-03-21T06:29:19.897Z</updated>
     
     <content type="html"><![CDATA[<p>学习每一门语言第一句话都是把神奇的<code>Hello world!</code>打印出来，而本博客是怎么说出第一句<em>Hello world!</em>呢?我在这里记录了诞生的经过。<a id="more"></a></p>
 <h3 id="首先感谢Github"><a href="#首先感谢Github" class="headerlink" title="首先感谢Github"></a>首先感谢Github</h3><p>　　想起Git,我第一印象不是复杂的命令更新，提交，分支，合并等等，而是一次满满感恩的回忆！<br>还记得当年“墙”还不是那么高，随意一个梯子(VPN之类的)还能时不时去看看资本世界的水深火热，然而道高一尺魔高一丈，随着墙的高筑，一般的梯子也爬不出去了。<br>　　Git这个全球最大的同性交友网站(笑)，为每一个IT从业者分享了来自全世界“搬砖者们”死亡多少脑细胞后的结晶。Git推出的学生计划，让全世界的大学生(天朝需要学生证)，免费使用云计算<a href="https://digitalOcean.com" target="_blank" rel="external">DigitalOcean</a>(vps)一年。大公司有大胸怀，Git履行了扶持社会的职责。如今阿里，腾讯都有相关的活动，也只是呵呵了。<br>    最后再次感谢Git让我第一次接触的云计算和酷酷的linux。</p>
@@ -222,6 +224,51 @@
     
       <category term="Hello world!" scheme="https://wzc0x0.github.io/categories/Hello-world/"/>
     
+    
+      <category term="Let&#39;s start！" scheme="https://wzc0x0.github.io/tags/Let-s-start%EF%BC%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Javascript面向对象开发</title>
+    <link href="https://wzc0x0.github.io/programming/js-oop.html"/>
+    <id>https://wzc0x0.github.io/programming/js-oop.html</id>
+    <published>2015-11-21T06:14:06.000Z</published>
+    <updated>2017-03-21T09:54:12.437Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Javascript是世界上最被误解的编程语言————《Javascript语言精粹》。</strong></p>
+<h2 id="面向对象与面向过程。"><a href="#面向对象与面向过程。" class="headerlink" title="面向对象与面向过程。"></a>面向对象与面向过程。</h2><p>当程序员拿到一个需求时，第一个反映就是如何直接地去实现这个需求，这就是面向过程的思维模式。面向对象的思维模式是不是直接考虑实现，而是进行需求分析，拆分客体（对象），寻找客体之间的联系。</p>
+<h2 id="面向对象的特点。"><a href="#面向对象的特点。" class="headerlink" title="面向对象的特点。"></a>面向对象的特点。</h2><ul>
+<li>一切皆对象</li>
+<li>对象具有封装和继承特性</li>
+<li>对象与对象之间使用消息通信，各自存在信息隐藏<a id="more"></a>
+<h2 id="Javascript中的面向对象"><a href="#Javascript中的面向对象" class="headerlink" title="Javascript中的面向对象"></a>Javascript中的面向对象</h2><blockquote>
+<p>大多数程序员首先学习或者使用的是类似 Java、C++ 等高级编译型语言（Java 虽然是半编译半解释，但一般做为编译型来讲解），因而先入为主地接受了“类”这个面向对象实现方式，从而在学习脚本语言的时候，习惯性地用类式面向对象语言中的概念来判断该语言是否是面向对象语言，或者是否具备面向对象特性。这也是阻碍程序员深入学习并掌握 JavaScript 的重要原因之一。<br>——<a href="http://blog.jobbole.com/38614/" target="_blank" rel="external">节选伯乐在线</a></p>
+</blockquote>
+</li>
+</ul>
+<p><strong>Javascript是基于原型(prototype)的面向对象方式</strong></p>
+<p>在基于类的面向对象方式中，对象（object）依靠 类（class）来产生。而在基于原型的面向对象方式中，对象（object）则是依靠 构造器（constructor）利用 原型（prototype）构造出来的。引用各类原型，构造器组装出来对象。博主认为这是更为彻底的面向对象思想。</p>
+<p><strong>彻底理解原型链</strong><br>在 ECMAScript 中，每个由构造器创建的对象拥有一个指向构造器 prototype 属性值的 隐式引用（implicit reference），这个引用称之为原型（prototype）。进一步，每个原型可以拥有指向自己原型的 隐式引用（即该原型的原型），如此下去，这就是所谓的原型链（prototype chain）。在具体的语言实现中，每个对象都有一个 <code>__proto__</code> 属性来实现对原型的 隐式引用。</p>
+<p>在ECMAScript 规定，当要给某个对象的属性赋值时，解释器会查找该对象原型链中第一个含有该属性的对象（注：原型本身就是一个对象，那么原型链即为一组对象的链。对象的原型链中的第一个对象是该对象本身）进行赋值。反之，如果要获取某个对象属性的值，解释器自然是返回该对象原型链中首先具有该属性的对象属性值。</p>
+<p><img src="http://jbcdn2.b0.upaiyun.com/2013/04/image001.png" alt="img"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;Javascript是世界上最被误解的编程语言————《Javascript语言精粹》。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;面向对象与面向过程。&quot;&gt;&lt;a href=&quot;#面向对象与面向过程。&quot; class=&quot;headerlink&quot; title=&quot;面向对象与面向过程。&quot;&gt;&lt;/a&gt;面向对象与面向过程。&lt;/h2&gt;&lt;p&gt;当程序员拿到一个需求时，第一个反映就是如何直接地去实现这个需求，这就是面向过程的思维模式。面向对象的思维模式是不是直接考虑实现，而是进行需求分析，拆分客体（对象），寻找客体之间的联系。&lt;/p&gt;
+&lt;h2 id=&quot;面向对象的特点。&quot;&gt;&lt;a href=&quot;#面向对象的特点。&quot; class=&quot;headerlink&quot; title=&quot;面向对象的特点。&quot;&gt;&lt;/a&gt;面向对象的特点。&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;一切皆对象&lt;/li&gt;
+&lt;li&gt;对象具有封装和继承特性&lt;/li&gt;
+&lt;li&gt;对象与对象之间使用消息通信，各自存在信息隐藏
+    
+    </summary>
+    
+      <category term="前端开发" scheme="https://wzc0x0.github.io/categories/programming/"/>
+    
+    
+      <category term="Javascript" scheme="https://wzc0x0.github.io/tags/Javascript/"/>
     
   </entry>
   
