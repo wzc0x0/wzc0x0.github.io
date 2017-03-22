@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wzc0x0.github.io/"/>
-  <updated>2017-03-22T07:45:24.127Z</updated>
+  <updated>2017-03-22T13:18:15.902Z</updated>
   <id>https://wzc0x0.github.io/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS中的随机数</title>
+    <link href="https://wzc0x0.github.io/Javascript/random.html"/>
+    <id>https://wzc0x0.github.io/Javascript/random.html</id>
+    <published>2016-05-22T09:28:36.000Z</published>
+    <updated>2017-03-22T13:18:15.902Z</updated>
+    
+    <content type="html"><![CDATA[<p>JS产生随机数的方法通常采用的是Javascript的Math.random()函数。<br>常用的几种用法：<br>Math.random()表示结果为0-1间的一个随机数(包括0,不包括1)<br>Math.floor(Math.random()<code>*</code>10+1)表示结果为1-10间的一个随机数<br>Math.floor(Math.random()<code>*</code>24)表示结果为0-23间的一个随机数<br><a id="more"></a></p>
+<p><strong> Math.random()</strong></p>
+<p>返回0和1之间的伪随机数，可能为0，但总是小于1，即：[0,1)</p>
+<p><strong> 返回指定范围的随机数(m~n之间)的公式 </strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*(n-m +<span class="number">1</span>) + m)</div><div class="line"><span class="comment">//[n-m+1,m)</span></div><div class="line"><span class="comment">//Math.floor是向下取整</span></div></pre></td></tr></table></figure></p>
+<p><strong>Math.ceil()</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">10</span>)</div></pre></td></tr></table></figure></p>
+<p>向上取整，获取1~10的随机数</p>
+<p><strong>Math.round(n)</strong><br>返回n四舍五入后整数的值</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JS产生随机数的方法通常采用的是Javascript的Math.random()函数。&lt;br&gt;常用的几种用法：&lt;br&gt;Math.random()表示结果为0-1间的一个随机数(包括0,不包括1)&lt;br&gt;Math.floor(Math.random()&lt;code&gt;*&lt;/code&gt;10+1)表示结果为1-10间的一个随机数&lt;br&gt;Math.floor(Math.random()&lt;code&gt;*&lt;/code&gt;24)表示结果为0-23间的一个随机数&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Javascript" scheme="https://wzc0x0.github.io/categories/Javascript/"/>
+    
+    
+      <category term="random" scheme="https://wzc0x0.github.io/tags/random/"/>
+    
+  </entry>
   
   <entry>
     <title>JS正则表达</title>
