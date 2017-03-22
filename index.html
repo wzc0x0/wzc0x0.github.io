@@ -77,8 +77,6 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="0x0's Blog" type="application/atom+xml" />
-
 
 
 
@@ -252,6 +250,275 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://wzc0x0.github.io/Javascript/regExp.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wzc0x0">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="0x0's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/Javascript/regExp.html" itemprop="url">
+                  Js正则表达
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-21T21:56:21+08:00">
+                2016-05-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。</p>
+<h2 id="创建一个正则表达"><a href="#创建一个正则表达" class="headerlink" title="创建一个正则表达"></a>创建一个正则表达</h2><p><strong>两种方法：</strong></p>
+<blockquote>
+<p>var reg = /^[a-zA-Z]+[0-9]*\W?_$/gi;<br>// 使用一个正则表达式字面量，其由包含在斜杠之间的模式组成</p>
+<p>var reg = new RegExp(“\w+”)<br>//使用构造函数RegExp，需要加引号和转义符号。可以使用传入多个参数构造复杂的正则表达</p>
+</blockquote>
+<h2 id="验证方法"><a href="#验证方法" class="headerlink" title="验证方法"></a>验证方法</h2><ul>
+<li>exec() 方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。</li>
+<li>test() 方法搜索字符串指定的值，根据结果并返回真或假。</li>
+</ul>
+<h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><table>
+<thead>
+<tr>
+<th>特殊字符</th>
+<th>描叙</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td>匹配字符的开头位置；放在方括号中表示取反的意思</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配字符的结束位置</td>
+</tr>
+<tr>
+<td>.</td>
+<td>匹配除换行符 \n 之外的任何单字符。</td>
+</tr>
+<tr>
+<td>?</td>
+<td>匹配一个字符出现零次或者一次 等价于{0,1}</td>
+</tr>
+<tr>
+<td>+</td>
+<td>匹配一个字符出现零次或者一次 等价于{1,}</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配一个字符出现零次或者多次 等价于{0,}</td>
+</tr>
+<tr>
+<td>w</td>
+<td>匹配任意一个字符、数字、下划线字符；等价[A-Za-z0-9_]</td>
+</tr>
+<tr>
+<td>W</td>
+<td>取小写w相反值；等价[^A-Za-z0-9_]</td>
+</tr>
+<tr>
+<td>d</td>
+<td>匹配一个数字；等价于[0-9]</td>
+</tr>
+<tr>
+<td>D</td>
+<td>取反小写d；等价于[^0-9]</td>
+</tr>
+<tr>
+<td>s</td>
+<td>匹配一个空白字符，包括\n\r\f\t\v等</td>
+</tr>
+<tr>
+<td>S</td>
+<td>取反小写s</td>
+</tr>
+<tr>
+<td>b</td>
+<td>匹配一个单词的边界，即字与空白间的位置</td>
+</tr>
+<tr>
+<td>B</td>
+<td>取反小写b</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>n是一个非负整数。匹配n次</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>n 是一个非负整数。至少匹配n 次</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>m 和 n 均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次</td>
+</tr>
+</tbody>
+</table>
+<p><strong>在量词 *、 + 、? 或 {} 的后面如果紧跟<code>?</code>，将会使量词变为非贪婪的（匹配尽量少的字符），而和默认使用的贪婪模式（匹配尽可能多的字符）正好相反</strong></p>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>描叙</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\f</td>
+<td>换页符</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行符</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车符</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>制表符</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>垂直制表符</td>
+</tr>
+</tbody>
+</table>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/(\w+):\/\/([^<span class="regexp">/:]+)(:\d*)?([^# ]*)/</span></div></pre></td></tr></table></figure>
+<p>解释：</p>
+<ul>
+<li>第一个括号：匹配在冒号和两个正斜杠前面的任何单词</li>
+<li>第二个括号：匹配 / 和 : 之外的一个或多个字符</li>
+<li>第三个括号：匹配冒号后面的零个或多个数字</li>
+<li>第四个括号：匹配不包括 # 或空格字符的任何字符序列</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -703,7 +970,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://wzc0x0.github.io/Hello-world/my-first-blog.html">
+    <link itemprop="mainEntityOfPage" href="https://wzc0x0.github.io/programming/js-oop.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wzc0x0">
@@ -725,8 +992,8 @@
             
               
                 
-                <a class="post-title-link" href="/Hello-world/my-first-blog.html" itemprop="url">
-                  欢迎来到我的博客！
+                <a class="post-title-link" href="/programming/js-oop.html" itemprop="url">
+                  Javascript面向对象开发
                 </a>
               
             
@@ -742,8 +1009,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-04T22:41:23+08:00">
-                2016-03-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-12T14:14:06+08:00">
+                2016-03-12
               </time>
             
 
@@ -765,8 +1032,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hello-world/" itemprop="url" rel="index">
-                    <span itemprop="name">Hello world!</span>
+                  <a href="/categories/programming/" itemprop="url" rel="index">
+                    <span itemprop="name">前端开发</span>
                   </a>
                 </span>
 
@@ -801,10 +1068,15 @@
 
       
         
-          
-            <p>本博客记录自己开发(有趣地玩)过程中的所思，所想，所得。同时也是与大家沟通交流的小平台！</p>
-
-          
+          <p><strong>Javascript是世界上最被误解的编程语言————《Javascript语言精粹》。</strong></p>
+<h2 id="面向对象与面向过程"><a href="#面向对象与面向过程" class="headerlink" title="面向对象与面向过程"></a>面向对象与面向过程</h2><p>&emsp;&emsp;当程序员拿到一个需求时，第一个反映就是如何直接地去实现这个需求，这就是面向过程的思维模式。面向对象的思维模式是不是直接考虑实现，而是进行需求分析，拆分客体（对象），寻找客体之间的联系。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/programming/js-oop.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -885,8 +1157,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-04T00:00:00+08:00">
-                2016-03-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-11-28T22:41:23+08:00">
+                2015-11-28
               </time>
             
 
@@ -984,161 +1256,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://wzc0x0.github.io/programming/js-oop.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="wzc0x0">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="0x0's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/programming/js-oop.html" itemprop="url">
-                  Javascript面向对象开发
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-11-21T14:14:06+08:00">
-                2015-11-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/programming/" itemprop="url" rel="index">
-                    <span itemprop="name">前端开发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><strong>Javascript是世界上最被误解的编程语言————《Javascript语言精粹》。</strong></p>
-<h2 id="面向对象与面向过程。"><a href="#面向对象与面向过程。" class="headerlink" title="面向对象与面向过程。"></a>面向对象与面向过程。</h2><p>当程序员拿到一个需求时，第一个反映就是如何直接地去实现这个需求，这就是面向过程的思维模式。面向对象的思维模式是不是直接考虑实现，而是进行需求分析，拆分客体（对象），寻找客体之间的联系。</p>
-<h2 id="面向对象的特点。"><a href="#面向对象的特点。" class="headerlink" title="面向对象的特点。"></a>面向对象的特点。</h2><ul>
-<li>一切皆对象</li>
-<li>对象具有封装和继承特性</li>
-<li>对象与对象之间使用消息通信，各自存在信息隐藏
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/programming/js-oop.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
           
           </div>
@@ -1181,7 +1305,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1192,7 +1316,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1203,7 +1327,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1211,13 +1335,6 @@
 
         </nav>
 
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
         
 
         <div class="links-of-author motion-element">
