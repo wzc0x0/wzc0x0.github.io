@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wzc0x0.github.io/"/>
-  <updated>2017-03-22T07:42:47.138Z</updated>
+  <updated>2017-03-22T07:45:24.127Z</updated>
   <id>https://wzc0x0.github.io/</id>
   
   <author>
@@ -16,13 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Js正则表达</title>
+    <title>JS正则表达</title>
     <link href="https://wzc0x0.github.io/Javascript/regExp.html"/>
     <id>https://wzc0x0.github.io/Javascript/regExp.html</id>
     <published>2016-05-21T13:56:21.000Z</published>
-    <updated>2017-03-22T07:42:47.138Z</updated>
+    <updated>2017-03-22T07:45:24.127Z</updated>
     
-    <content type="html"><![CDATA[<p>正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。</p>
+    <content type="html"><![CDATA[<p>正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。<br><a id="more"></a></p>
 <h2 id="创建一个正则表达"><a href="#创建一个正则表达" class="headerlink" title="创建一个正则表达"></a>创建一个正则表达</h2><p><strong>两种方法：</strong></p>
 <blockquote>
 <p>var reg = /^[a-zA-Z]+[0-9]*\W?_$/gi;<br>// 使用一个正则表达式字面量，其由包含在斜杠之间的模式组成</p>
@@ -153,8 +153,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。&lt;/p&gt;
-&lt;h2 id=&quot;创
+      &lt;p&gt;正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。&lt;br&gt;
     
     </summary>
     

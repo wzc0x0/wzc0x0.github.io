@@ -283,7 +283,7 @@
               
                 
                 <a class="post-title-link" href="/Javascript/regExp.html" itemprop="url">
-                  Js正则表达
+                  JS正则表达
                 </a>
               
             
@@ -358,136 +358,14 @@
 
       
         
-          
-            <p>正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。</p>
-<h2 id="创建一个正则表达"><a href="#创建一个正则表达" class="headerlink" title="创建一个正则表达"></a>创建一个正则表达</h2><p><strong>两种方法：</strong></p>
-<blockquote>
-<p>var reg = /^[a-zA-Z]+[0-9]*\W?_$/gi;<br>// 使用一个正则表达式字面量，其由包含在斜杠之间的模式组成</p>
-<p>var reg = new RegExp(“\w+”)<br>//使用构造函数RegExp，需要加引号和转义符号。可以使用传入多个参数构造复杂的正则表达</p>
-</blockquote>
-<h2 id="验证方法"><a href="#验证方法" class="headerlink" title="验证方法"></a>验证方法</h2><ul>
-<li>exec() 方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null。</li>
-<li>test() 方法搜索字符串指定的值，根据结果并返回真或假。</li>
-</ul>
-<h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><table>
-<thead>
-<tr>
-<th>特殊字符</th>
-<th>描叙</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>^</td>
-<td>匹配字符的开头位置；放在方括号中表示取反的意思</td>
-</tr>
-<tr>
-<td>$</td>
-<td>匹配字符的结束位置</td>
-</tr>
-<tr>
-<td>.</td>
-<td>匹配除换行符 \n 之外的任何单字符。</td>
-</tr>
-<tr>
-<td>?</td>
-<td>匹配一个字符出现零次或者一次 等价于{0,1}</td>
-</tr>
-<tr>
-<td>+</td>
-<td>匹配一个字符出现零次或者一次 等价于{1,}</td>
-</tr>
-<tr>
-<td>*</td>
-<td>匹配一个字符出现零次或者多次 等价于{0,}</td>
-</tr>
-<tr>
-<td>w</td>
-<td>匹配任意一个字符、数字、下划线字符；等价[A-Za-z0-9_]</td>
-</tr>
-<tr>
-<td>W</td>
-<td>取小写w相反值；等价[^A-Za-z0-9_]</td>
-</tr>
-<tr>
-<td>d</td>
-<td>匹配一个数字；等价于[0-9]</td>
-</tr>
-<tr>
-<td>D</td>
-<td>取反小写d；等价于[^0-9]</td>
-</tr>
-<tr>
-<td>s</td>
-<td>匹配一个空白字符，包括\n\r\f\t\v等</td>
-</tr>
-<tr>
-<td>S</td>
-<td>取反小写s</td>
-</tr>
-<tr>
-<td>b</td>
-<td>匹配一个单词的边界，即字与空白间的位置</td>
-</tr>
-<tr>
-<td>B</td>
-<td>取反小写b</td>
-</tr>
-<tr>
-<td>{n}</td>
-<td>n是一个非负整数。匹配n次</td>
-</tr>
-<tr>
-<td>{n,}</td>
-<td>n 是一个非负整数。至少匹配n 次</td>
-</tr>
-<tr>
-<td>{n,m}</td>
-<td>m 和 n 均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次</td>
-</tr>
-</tbody>
-</table>
-<p><strong>在量词 *、 + 、? 或 {} 的后面如果紧跟<code>?</code>，将会使量词变为非贪婪的（匹配尽量少的字符），而和默认使用的贪婪模式（匹配尽可能多的字符）正好相反</strong></p>
-<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><table>
-<thead>
-<tr>
-<th>转义字符</th>
-<th>描叙</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\f</td>
-<td>换页符</td>
-</tr>
-<tr>
-<td>\n</td>
-<td>换行符</td>
-</tr>
-<tr>
-<td>\r</td>
-<td>回车符</td>
-</tr>
-<tr>
-<td>\t</td>
-<td>制表符</td>
-</tr>
-<tr>
-<td>\v</td>
-<td>垂直制表符</td>
-</tr>
-</tbody>
-</table>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/(\w+):\/\/([^<span class="regexp">/:]+)(:\d*)?([^# ]*)/</span></div></pre></td></tr></table></figure>
-<p>解释：</p>
-<ul>
-<li>第一个括号：匹配在冒号和两个正斜杠前面的任何单词</li>
-<li>第二个括号：匹配 / 和 : 之外的一个或多个字符</li>
-<li>第三个括号：匹配冒号后面的零个或多个数字</li>
-<li>第四个括号：匹配不包括 # 或空格字符的任何字符序列</li>
-</ul>
-
-          
+          <p>正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、replace、search 和 split 方法。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Javascript/regExp.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
