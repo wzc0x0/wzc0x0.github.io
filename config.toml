@@ -1,4 +1,4 @@
-baseURL = "http://localhost:1313/"
+baseURL = "https://wzc0x0.github.io/"
 title = "Tech Blog"
 enableRobotsTXT = true
 enableEmoji = true
